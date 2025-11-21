@@ -2,6 +2,11 @@ import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import AnimatedBackground from '../../components/bg_animations/AnimatedBackground'
+import ParticleBackground from '../../components/bg_animations/ParticleBackground'
+import InteractiveBackground from '../../components/bg_animations/InteractiveBackground'
+import MorphingGradientBackground from '../../components/bg_animations/MorphingGradientBackground'
+import ProfessionalBackground from '../../components/bg_animations/ProfessionalBackground'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -104,9 +109,14 @@ const Home = () => {
   ]
 
   return (
-    <div className="pt-16 bg-gray-700">
+    <div className="pt-16 relative">
+      {/* <AnimatedBackground/> */}
+      {/* <ParticleBackground/> */}
+      {/* <InteractiveBackground/> */}
+      {/* <MorphingGradientBackground/> */}
+      <ProfessionalBackground/>
       {/* Hero Section */}
-      <section ref={heroRef} className="min-h-screen flex items-center justify-center gradient-bg text-white">
+      <section ref={heroRef} className="min-h-screen flex items-center justify-center  text-white">
         <div className="container mx-auto px-6 text-center">
           <h1 className="hero-title text-5xl md:text-7xl font-bold mb-6">
             GSAP <span className="text-yellow-300">Live</span>
@@ -117,7 +127,7 @@ const Home = () => {
           <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/animations"
-              className="px-8 py-4 bg-white text-primary rounded-lg font-semibold hover:shadow-2xl transition-all transform hover:scale-105 text-black"
+              className="px-8 py-4 text-primary rounded-lg font-semibold hover:shadow-2xl transition-all transform hover:scale-105 text-black"
             >
               Explore Animations
             </Link>
@@ -132,7 +142,7 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section ref={featuresRef} className="py-20 bg-gray-50">
+      <section ref={featuresRef} className="py-20 ">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 gradient-text">
             Why Choose GSAP Live?
@@ -174,7 +184,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-500 from-primary to-secondary text-white">
+      <section className="py-20 text-white">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Ready to Elevate Your Animations?
