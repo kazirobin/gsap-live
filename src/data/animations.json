@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "name": "Stagger Text Reveal",
+    "category": "Text",
+    "description": "Letters stagger in with scale and opacity",
+    "code": "gsap.fromTo('.letter', { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power4.out', stagger: 0.05 });"
+  },
+  {
+    "id": 2,
+    "name": "3D Flip Card",
+    "category": "Cards",
+    "description": "Classic 3D flip on hover",
+    "code": "gsap.to(card, { rotationY: 180, duration: 0.8, ease: 'power2.inOut', transformPerspective: 1000 });"
+  },
+  {
+    "id": 3,
+    "name": "Magnetic Button",
+    "category": "Interactive",
+    "description": "Button follows cursor with smooth magnet effect",
+    "code": "gsap.to(btn, { x: xMove * 0.4, y: yMove * 0.4, ease: 'power3.out' });"
+  },
+  {
+    "id": 4,
+    "name": "ScrollTrigger Pin & Scale",
+    "category": "Scroll",
+    "description": "Pin section and scale up while scrolling",
+    "code": "gsap.to('.box', { scale: 2, scrollTrigger: { trigger: '.box', pin: true, scrub: true } });"
+  },
+  {
+    "id": 5,
+    "name": "SVG Morph",
+    "category": "SVG",
+    "description": "Smooth path morphing between shapes",
+    "code": "gsap.to('#path1', { morphSVG: '#path2', duration: 1.5, ease: 'elastic.out(1,0.5)' });"
+  },
+  {
+    "id": 6,
+    "name": "Horizontal Scroll Gallery",
+    "category": "Scroll",
+    "description": "Pin and scroll horizontally through panels",
+    "code": "gsap.to('.panel', { xPercent: -100 * (panels.length - 1), scrollTrigger: { trigger: '.container', pin: true, scrub: 1 } });"
+  },
+  {
+    "id": 7,
+    "name": "Parallax Hero",
+    "category": "Parallax",
+    "description": "Multi-layer parallax with depth effect",
+    "code": "gsap.to('.layer', { yPercent: -speed * 100, ease: 'none', scrollTrigger: { trigger: '.hero', scrub: true } });"
+  },
+ 
+  {
+    "id": 8,
+    "name": "Draw SVG Stroke",
+    "category": "SVG",
+    "description": "Draw SVG path on scroll",
+    "code": "gsap.fromTo(path, { strokeDashoffset: length }, { strokeDashoffset: 0, scrollTrigger: { trigger: path, scrub: true } });"
+  },
+  {
+    "id": 9,
+    "name": "Cursor Trail Blob",
+    "category": "Interactive",
+    "description": "Smooth blob follows cursor",
+    "code": "gsap.to('.blob', { x: { x: mouseX, y: mouseY, ease: 'power3.out' });"
+  },
+  {
+    "id": 10,
+    "name": "Timeline Sequence",
+    "category": "Timeline",
+    "description": "Complex multi-step animation sequence",
+    "code": "const tl = gsap.timeline(); tl.to('.box', { x: 300 }).to('.box', { rotation: 360 }).to('.box', { scale: 0 });"
+  },
+  {
+    "id": 11,
+    "name": "Counter Up",
+    "category": "Text",
+    "description": "Numbers count up with easing",
+    "code": "gsap.to(counter, { innerHTML: endValue, duration: 2, snap: { innerHTML: 1 }, ease: 'power2.out' });"
+  },
+  {
+    "id": 12,
+    "name": "Image Mask Reveal",
+    "category": "Images",
+    "description": "Image revealed through expanding circle mask",
+    "code": "gsap.to('.mask', { scale: 15, duration: 1.8, ease: 'power4.inOut' });"
+  },
+  {
+    "id": 13,
+    "name": "Floating Particles",
+    "category": "Effects",
+    "description": "Random floating particles background",
+    "code": "gsap.to(particles, { y: 'random(-30, 30)', x: 'random(-20, 20)', rotation: 'random(-180, 180)', repeat: -1, yoyo: true, stagger: 0.2 });"
+  },
+  {
+    "id": 14,
+    "name": "Smooth Page Transition",
+    "category": "Transitions",
+    "description": "Full-page wipe transition overlay",
+    "code": "gsap.to('.transition-overlay', { x: '100%', duration: 1, ease: 'power4.inOut' });"
+  },
+  {
+    "id": 15,
+    "name": "Text Scramble Effect",
+    "category": "Text",
+    "description": "Matrix-style text scramble reveal",
+    "code": "gsap.to('.scramble', { duration: 2, text: 'Hello World', ease: 'none', scramble: true });"
+  },
+  {
+    "id": 16,
+    "name": "3D Tilt Card on Hover",
+    "category": "Cards",
+    "description": "Vanilla-tilt style 3D hover effect",
+    "code": "gsap.to(card, { rotationY: tiltX * 20, rotationX: -tiltY * 20, scale: 1.05, ease: 'power2.out' });"
+  },
+  {
+    "id": 17,
+    "name": "Liquid Button",
+    "category": "Interactive",
+    "description": "Gooey SVG filter button effect",
+    "code": "gsap.to('feGaussianBlur', { attr: { stdDeviation: 10 }, duration: 0.6 });"
+  },
+  {
+    "id": 18,
+    "name": "Progress Bar Fill",
+    "category": "UI",
+    "description": "Smooth animated progress bar with trail",
+    "code": "gsap.to('.progress', { width: '100%', duration: 3, ease: 'power3.inOut' });"
+  },
+  {
+    "id": 19,
+    "name": "Clip-Path Reveal",
+    "category": "Effects",
+    "description": "Content revealed with expanding polygon",
+    "code": "gsap.to(el, { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', duration: 1.5, ease: 'power4.out' });"
+  },
+  {
+    "id": 20,
+    "name": "Draggable Carousel",
+    "category": "Interactive",
+    "description": "Drag-to-scroll with momentum",
+    "code": "Draggable.create('.carousel', { type: 'x', bounds: container, inertia: true });"
+  },
+  {
+    "id": 21,
+    "name": "Fade In Sections",
+    "category": "Scroll",
+    "description": "Sections fade & slide in on scroll",
+    "code": "gsap.from('.section', { y: 80, opacity: 0, duration: 1, scrollTrigger: { trigger: '.section', start: 'top 85%' } });"
+  },
+  {
+    "id": 22,
+    "name": "Split Text Lines",
+    "category": "Text",
+    "description": "Reveal text line by line with stagger",
+    "code": "gsap.from(split.lines, { y: 120, opacity: 0, stagger: 0.1, duration: 1.2, ease: 'power3.out' });"
+  },
+  {
+    "id": 23,
+    "name": "Color Changing Navbar",
+    "category": "UI",
+    "description": "Navbar changes color per section",
+    "code": "ScrollTrigger.create({ trigger: section, onEnter: () => gsap.to(nav, { backgroundColor: color }) });"
+  },
+  {
+    "id": 24,
+    "name": "Rotating 3D Globe",
+    "category": "3D",
+    "description": "Continuously rotating 3D sphere",
+    "code": "gsap.to('.globe', { rotationY: '+=360', duration: 30, repeat: -1, ease: 'none' });"
+  },
+  {
+    "id": 25,
+    "name": "Neon Glow Text",
+    "category": "Text",
+    "description": "Flickering neon sign effect",
+    "code": "gsap.to('.neon', { textShadow: '0 0 30px #0ff, 0 0 60px #0ff', duration: 0.1, repeat: -1, yoyo: true });"
+  }
+]

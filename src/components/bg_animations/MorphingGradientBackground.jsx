@@ -6,13 +6,12 @@ const MorphingGradientBackground = () => {
 
   useEffect(() => {
     const gradients = [
-      "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-      "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-      "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-      "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
-      "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
-    ];
-
+  "linear-gradient(135deg, #0f172a 0%, #312e81 100%)",  // Deep → Indigo
+  "linear-gradient(135deg, #0f172a 0%, #0d5038 100%)",  // Deep → Emerald
+  "linear-gradient(135deg, #1e293b 0%, #1e3a8a 100%)",  // Slate → Navy
+  "linear-gradient(135deg, #1e293b 0%, #1e40af 100%)",  // Slate → Blue
+  "linear-gradient(135deg, #0f172a 0%, #5b21b6 100%)",  // Deep → Violet
+];
     let currentGradient = 0;
 
     const timeline = gsap.timeline({ repeat: -1 });
@@ -41,3 +40,8 @@ const MorphingGradientBackground = () => {
   );
 };
 export default MorphingGradientBackground;
+
+
+// Add slight delay or stagger between changes
+// Or use onUpdate to trigger other effects
+// Or make it pause on hover, etc.

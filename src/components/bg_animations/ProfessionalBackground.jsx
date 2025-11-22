@@ -22,24 +22,33 @@ const ProfessionalBackground = () => {
     window.addEventListener('resize', resizeCanvas);
 
     // Professional color palettes
-    const colorPalettes = [
-      {
-        primary: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        particles: ['#4facfe', '#00f2fe', '#667eea', '#764ba2']
-      },
-      {
-        primary: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-        particles: ['#4facfe', '#00f2fe', '#667eea', '#43e97b']
-      },
-      {
-        primary: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
-        particles: ['#43e97b', '#38f9d7', '#4facfe', '#00f2fe']
-      },
-      {
-        primary: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
-        particles: ['#fa709a', '#fee140', '#ff6b6b', '#f5576c']
-      }
-    ];
+const colorPalettes = [
+  {
+    // 1. Deep Indigo → Royal Blue (Trust, Tech, Professional)
+    primary: 'linear-gradient(135deg, #1e293b 0%, #3730a3 100%)',
+    particles: ['#3730a3', '#4f46e5', '#6366f1', '#8b5cf6']
+  },
+  {
+    // 2. Emerald → Teal (Growth, Finance, Modern Luxury)
+    primary: 'linear-gradient(135deg, #0f766e 0%, #14b8a6 100%)',
+    particles: ['#0f766e', '#14b8a6', '#06b6d4', '#0891b2']
+  },
+  {
+    // 3. Midnight Blue → Ocean (Calm, Corporate, Premium Tech)
+    primary: 'linear-gradient(135deg, #0f172a 0%, #1e40af 100%)',
+    particles: ['#1e40af', '#3b82f6', '#0ea5e9', '#06b6d4']
+  },
+  {
+    // 4. Slate → Violet (Creative Agencies, Modern & Bold)
+    primary: 'linear-gradient(135deg, #1e293b 0%, #6d28d9 100%)',
+    particles: ['#6d28d9', '#8b5cf6', '#a78bfa', '#c4b5fd']
+  },
+  {
+    // 5. Charcoal → Amber Gold (Luxury, Premium Brands, High-End)
+    primary: 'linear-gradient(135deg, #1c1917 0%, #d97706 100%)',
+    particles: ['#d97706', '#f59e0b', '#fbbf24', '#fde047']
+  }
+];
 
     let currentPalette = 0;
 

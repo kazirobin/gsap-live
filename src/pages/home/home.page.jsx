@@ -114,10 +114,10 @@ const Home = () => {
       {/* <ParticleBackground/> */}
       {/* <InteractiveBackground/> */}
       {/* <MorphingGradientBackground/> */}
-      <ProfessionalBackground/>
+      {/* <ProfessionalBackground/> */}
       {/* Hero Section */}
-      <section ref={heroRef} className="min-h-screen flex items-center justify-center  text-white">
-        <div className="container mx-auto px-6 text-center">
+      <section ref={heroRef} className="min-h-screen flex pt-30 justify-center  text-white">
+        <div className="container mx-auto text-center">
           <h1 className="hero-title text-5xl md:text-7xl font-bold mb-6">
             GSAP <span className="text-yellow-300">Live</span>
           </h1>
@@ -127,7 +127,7 @@ const Home = () => {
           <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/animations"
-              className="px-8 py-4 text-primary rounded-lg font-semibold hover:shadow-2xl transition-all transform hover:scale-105 text-black"
+              className="px-8 py-4 text-primary rounded-lg font-semibold hover:shadow-2xl transition-all transform hover:scale-105 text-white"
             >
               Explore Animations
             </Link>
@@ -167,13 +167,13 @@ const Home = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {showcaseItems.map((item, index) => (
-              <div key={index} className="showcase-item bg-white p-8 rounded-2xl shadow-lg card-hover text-center">
+              <div key={index} className="showcase-item border p-8 rounded-2xl shadow-lg card-hover text-center">
                 <div className="text-6xl mb-6 animate-float">{item.image}</div>
                 <h3 className="text-2xl font-semibold mb-4">{item.title}</h3>
-                <p className="text-gray-600 mb-6">{item.description}</p>
+                <p className=" mb-6">{item.description}</p>
                 <Link
                   to="/animations"
-                  className="inline-block px-6 py-3 bg-primary text-white rounded-lg hover:shadow-lg transition-all"
+                  className="border inline-block px-6 py-3 bg-primary  rounded-lg hover:shadow-lg transition-all"
                 >
                   View Examples
                 </Link>
@@ -183,31 +183,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 text-white">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Elevate Your Animations?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join thousands of developers using GSAP Live to create stunning website animations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/pricing"
-              className="px-8 py-4 bg-white text-black text-primary rounded-lg font-semibold hover:shadow-2xl transition-all"
-            >
-              Get Premium Access
-            </Link>
-            <Link
-              to="/tutorials"
-              className="px-8 py-4 border-2 border-white text-white hover:text-black rounded-lg font-semibold hover:bg-white hover:text-primary transition-all"
-            >
-              Explore Free Tutorials
-            </Link>
-          </div>
-        </div>
-      </section>
+    
     </div>
   )
 }
